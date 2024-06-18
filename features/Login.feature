@@ -1,5 +1,6 @@
 Feature: Login feature
 
+
   @Smoke
   Scenario: Login to bescome as a single user with valid credential
     Given Login to bescom app
