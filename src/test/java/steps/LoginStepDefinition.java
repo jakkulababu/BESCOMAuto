@@ -90,10 +90,10 @@ public class LoginStepDefinition {
 	@Then("I validate home link shoule be {string}")
 	public void i_validate_home_link_shoule_be(String expected) {
 		wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='BESCOM Online Portal']")));
-		String actualHeader = driver.findElement(By.xpath("//span[text()='BESCOM Online Portal']")).getText();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@name='websiteName']")));
+		String actualHeader = driver.findElement(By.xpath("//span[@name='websiteName']")).getText();
 		Assert.assertEquals(expected, actualHeader);
-		clickSignOut();
+//		clickSignOut();
 	}
 
 	@Then("I validate home link is {string}")
