@@ -6,24 +6,24 @@ Feature: Login feature
     When enter 'jakkulababu@gmail.com' and 'Babu1234' and click on ok button
     Then I validate home link is 'BESCOM'
 
-  #@Smoke @P23
-  #Scenario: Login to bescome with valid credential using datatable
-    #Given Login to bescom app
-    #When i enter user id and password and click on login button
-      #| userid                | password |
-      #| jakkulababu@gmail.com | Babu1234 |
-    #Then I validate home link is 'BESCOM Online Portal'
-#
-  #@Smoke @P23
-  #Scenario Outline: Login to bescome with different user role with valid credential
-    #Given Login to bescom app
-    #When i enter '<userid>' and '<password>' and click on login button
-    #Then I validate home link shoule be '<homeText>'
-#
-    #Examples: 
-      #| userid                | password | homeText             |
-      #| jakkulababu@gmail.com | Babu1234 | BESCOM Online Portal |
-      #| jakkulababu@gmail.com | Babu1234 | BESCOM Online Portal |
+  @Smoke
+  Scenario: Login to bescome with valid credential using datatable
+    Given Login to bescom app
+    When i enter user id and password and click on login button
+      | userid                | password |
+      | jakkulababu@gmail.com | Babu1234 |
+    Then I validate home link is 'BESCOM'
+
+  @Smoke @P23
+  Scenario Outline: Login to bescome with different user role with valid credential
+    Given Login to bescom app
+    When i enter '<userid>' and '<password>' and click on login button
+    Then I validate home link shoule be '<homeText>'
+
+    Examples: 
+       | userid                | password | homeText             |
+      | jakkulababu@gmail.com | Babu1234 |BESCOM|
+      | jakkulababu@gmail.com | Babu1234 |BESCOM|
 
   #@Smoke @P23
   #Scenario Outline: Login to bescome with invalid credential
