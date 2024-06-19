@@ -1,5 +1,6 @@
 Feature: Login feature
 
+
   @Smoke
   Scenario: Login to bescome as a single user with valid credential
     Given Login to bescom app
@@ -14,17 +15,17 @@ Feature: Login feature
       | jakkulababu@gmail.com | Babu1234 |
     Then I validate home link is 'BESCOM'
 
-  @Smoke @P23
+  @Smoke
   Scenario Outline: Login to bescome with different user role with valid credential
     Given Login to bescom app
     When i enter '<userid>' and '<password>' and click on login button
     Then I validate home link shoule be '<homeText>'
 
     Examples: 
-       | userid                | password | homeText             |
-      | jakkulababu@gmail.com | Babu1234 |BESCOM|
-      | jakkulababu@gmail.com | Babu1234 |BESCOM|
-
+      | userid                | password | homeText |
+      | jakkulababu@gmail.com | Babu1234 | BESCOM   |
+      | jakkulababu@gmail.com | Babu1234 | BESCOM   |
+            
   #@Smoke @P23
   #Scenario Outline: Login to bescome with invalid credential
     #Given Login to bescom app
