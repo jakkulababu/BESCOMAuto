@@ -33,7 +33,10 @@ public class LoginStepDefinition {
 	@FindBy(xpath = "//*[@name='btnSubmit']")
 	public WebElement signIn;
 
-	@FindBy(id = "//*[@class='btn btn-secondary btn-md lgn-btn']")
+	@FindBy(xpath = "//button[@class='btn btn-secondary btn-md lgn-btn']")
+	public WebElement signOutBack;
+	
+	@FindBy (xpath = "//a[normalize-space()='Logout']")
 	public WebElement signOut;
 
 	public LoginStepDefinition(Common_steps common_steps) {
@@ -52,6 +55,7 @@ public class LoginStepDefinition {
 	}
 
 	public void clickSignOut() {
+		signOutBack.click();
 		signOut.click();
 
 	}
@@ -93,7 +97,7 @@ public class LoginStepDefinition {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@name='websiteName']")));
 		String actualHeader = driver.findElement(By.xpath("//span[@name='websiteName']")).getText();
 		Assert.assertEquals(expected, actualHeader);
-//		clickSignOut();
+		clickSignOut();
 	}
 
 	@Then("I validate home link is {string}")
