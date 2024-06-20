@@ -1,6 +1,5 @@
 Feature: Login feature
 
-
   @Smoke
   Scenario: Login to bescome as a single user with valid credential
     Given Login to bescom app
@@ -28,7 +27,17 @@ Feature: Login feature
       | jakkulababu@gmail.com | Babu1234 | BESCOM   |
       | jakkulababu@gmail.com | Babu1234 | BESCOM   |
       | jakkulababu@gmail.com | Babu1234 | BESCOM   |
-            
+
+  @Smoke
+  Scenario: Login to bescome with valid credential using datatable
+    Given Login to bescom app
+    When i enter user id and password and click on login button
+      | userid                | password |
+      | jakkulababu@gmail.com | Babu1234 |
+    Then I validate home link is 'BESCOM'
+
+    
+    
   #@Smoke @P23
   #Scenario Outline: Login to bescome with invalid credential
     #Given Login to bescom app
