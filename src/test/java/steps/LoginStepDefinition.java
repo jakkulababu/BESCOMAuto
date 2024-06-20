@@ -97,7 +97,7 @@ public class LoginStepDefinition {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@name='websiteName']")));
 		String actualHeader = driver.findElement(By.xpath("//span[@name='websiteName']")).getText();
 		Assert.assertEquals(expected, actualHeader);
-		clickSignOut();
+//		clickSignOut();
 	}
 
 	@Then("I validate home link is {string}")
