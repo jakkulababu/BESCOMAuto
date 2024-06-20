@@ -108,6 +108,7 @@ public class LoginStepDefinition {
 		Assert.assertEquals(expectedString, actualHeader);
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ctl00_siteSearch_lnkLogout")));
 //		clickSignOut();
+//		
 	}
 
 	@When("i enter invalid {string} and {string} and click on login button")
