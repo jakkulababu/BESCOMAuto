@@ -25,9 +25,6 @@ Feature: Login feature
       | jakkulababu@gmail.com | Babu1234 | BESCOM   |
       | jakkulababu@gmail.com | Babu1234 | BESCOM   |
       | jakkulababu@gmail.com | Babu1234 | BESCOM   |
-      | jakkulababu@gmail.com | Babu1234 | BESCOM   |
-      | jakkulababu@gmail.com | Babu1234 | BESCOM   |
-      | jakkulababu@gmail.com | Babu1234 | BESCOM   |
 
 
   @Smoke
