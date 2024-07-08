@@ -22,11 +22,11 @@ Feature: Login feature
 
     Examples: 
       | userid                | password | homeText |
-      | jakkulababu@gmail.com | Babu1234 | BESCOM   |
-      | jakkulababu@gmail.com | Babu1234 | BESCOM   |
-      | jakkulababu@gmail.com | Babu1234 | BESCOM   |
-      | jakkulababu@gmail.com | Babu1234 | BESCOM   |
-      | jakkulababu@gmail.com | Babu1234 | BESCOM   |
+      | jakkulababu@gmail.com | Babu1234 | BESCO   |
+      | jakkulababu@gmail.com | Babu1234 | BESCO   |
+      | jakkulababu@gmail.com | Babu1234 | BESCO   |
+      | jakkulababu@gmail.com | Babu1234 | BESCO   |
+
 
   @Smoke
   Scenario: Login to bescome with valid credential using datatable
