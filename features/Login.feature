@@ -23,6 +23,11 @@ Feature: Login feature
     Examples: 
       | userid                | password | homeText |
       | jakkulababu@gmail.com | Babu1234 | BESCO   |
+      | jakkulababu@gmail.com | Babu1234 | BESCO   |
+      | jakkulababu@gmail.com | Babu1234 | BESCO   |
+      | jakkulababu@gmail.com | Babu1234 | BESCO   |
+      | jakkulababu@gmail.com | Babu1234 | BESCO   |
+      | jakkulababu@gmail.com | Babu1234 | BESCO   |
 
 
   @Smoke
