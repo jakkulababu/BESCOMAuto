@@ -14,7 +14,8 @@ public class Common_steps {
 
 	@Before
 	public void launchChromeBrowser() {
-		System.setProperty("webdriver.chrome.driver", "webdriver/chromedriver.exe");
+		// System.setProperty("webdriver.chrome.driver", "webdriver/chromedriver.exe");
+		io.github.bonigarcia.wdm.WebDriverManager.chromedriver().clearDriverCache().setup();
 		driver = new ChromeDriver();
 	}
 
