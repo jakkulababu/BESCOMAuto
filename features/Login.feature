@@ -1,12 +1,13 @@
+@Smoke
 Feature: Login feature
 
-  @Smoke
+  @TC1
   Scenario: Login to bescome as a single user with valid credential
     Given Login to bescom app
     When enter 'jakkulababu@gmail.com' and 'Babu1234' and click on ok button
     Then I validate home link is 'BESCOM'
 
-  @Smoke
+  @TC2
   Scenario: Login to bescome with valid credential using datatable
     Given Login to bescom app
     When i enter user id and password and click on login button
@@ -14,7 +15,7 @@ Feature: Login feature
       | jakkulababu@gmail.com | Babu1234 |
     Then I validate home link is 'BESCOM'
 
-  @Smoke
+  @TC3
   Scenario Outline: Login to bescome with different user role with valid credential
     Given Login to bescom app
     When i enter '<userid>' and '<password>' and click on login button
